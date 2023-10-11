@@ -9,6 +9,9 @@ spark = SparkSession.builder \
 # Tạo DataFrame từ dữ liệu CSV
 df = spark.read.csv("C:\\spark-3.5.0-bin-hadoop3\\data\\Book1.csv", header=True, inferSchema=True)
 
+# show bảng file csv
+df.show()
+
 # Tạo một bảng tạm thời từ DataFrame, bảng này có thể được truy vấn bằng SQL
 df.createOrReplaceTempView("people")
 
