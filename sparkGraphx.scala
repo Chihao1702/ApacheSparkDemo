@@ -12,8 +12,7 @@ case class Flight(dofM:String, dofW:String, carrier:String, tailnum:String, flnu
  
 def parseFlight(str: String): Flight = {
   val line = str.split(",")
-  Flight(line(0), line(1), line(2), line(3), line(4).toInt, line(5).toLong, line(6), line(7).toLong, line(8), line(9).toDouble, line(10).toDouble, line(11).toDouble, line(12).toDouble, line(13).toDouble, line(14).toDouble, line(15).toDouble, line(16).toInt,line(17))
-}
+  Flight(line(0), line(1), line(2), line(3), line(4).toInt, line(5).toLong, line(6), line(7).toLong, line(8), line(9).toDouble, line(10).toDouble, line(11).toDouble, line(12).toDouble, line(13).toDouble, line(14).toDouble, line(15).toDouble, line(16).toInt,line(17))}
 
  
 val textRDD = sc.textFile("C:\\spark-3.5.0-bin-hadoop3\\data\\rita2014jan.csv")
