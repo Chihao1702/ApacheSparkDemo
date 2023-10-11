@@ -2,8 +2,8 @@
 from pyspark.sql import SparkSession
 
 // Khởi tạo SparkSession
-spark = SparkSession.builder \
-    .appName("Spark SQL Example") \
+spark = SparkSession.builder 
+    .appName("Spark SQL Example") 
     .getOrCreate()
 
 // Tạo DataFrame từ dữ liệu CSV
