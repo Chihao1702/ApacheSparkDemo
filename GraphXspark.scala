@@ -15,7 +15,11 @@ val vertices: RDD[(VertexId, (String, Int))] = sc.parallelize(Array(
   (5L, ("Tan Thong", 24)),
   (6L, ("Ngoc Nhung", 21)),
   (7L, ("Duc Manh", 20)),
-  (8L, ("Ly Cuong", 25))
+  (8L, ("Minh Nhat", 17)),
+  (9L, ("Viet Khoa", 18)),
+  (10L, ("Tuan Hung", 22)),
+  (11L, ("Duc Manh", 20)),
+  (12L, ("Ly Cuong", 25))
 ))
 
 // Tạo các cạnh: Cạnh biểu diễn các mối quan hệ giữa các đỉnh trong đồ thị. Mỗi cạnh chứa thông tin về loại quan hệ
