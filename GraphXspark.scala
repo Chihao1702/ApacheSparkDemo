@@ -12,8 +12,10 @@ val vertices: RDD[(VertexId, (String, Int))] = sc.parallelize(Array(
   (2L, ("Thanh Loi", 21)),
   (3L, ("Tran Chau", 19)),
   (4L, ("Tan Phat", 23)),
-  (5L, ("Duc Manh", 22)),
-  (6L, ("Ly Cuong", 25))
+  (5L, ("Tan Thong", 24)),
+  (6L, ("Ngoc Nhung", 21)),
+  (7L, ("Duc Manh", 20)),
+  (8L, ("Ly Cuong", 25))
 ))
 
 // Tạo các cạnh: Cạnh biểu diễn các mối quan hệ giữa các đỉnh trong đồ thị. Mỗi cạnh chứa thông tin về loại quan hệ
@@ -23,13 +25,14 @@ val relationships: RDD[Edge[String]] = sc.parallelize(Array(
   Edge(2L, 3L, "uncle"),
   Edge(3L, 2L, "brother"),
   Edge(3L, 4L, "sister"),
+  Edge(1L, 6L, "husband"),
   Edge(4L, 5L, "father"),
   Edge(5L, 6L, "family"),
   Edge(6L, 7L, "follow")
 ))
 
 // Xác định một giá trị mặc định cho các đỉnh không có dữ liệu: Điều này cần thiết để xử lý trường hợp khi có cạnh trỏ đến một đỉnh không tồn tại
-val defaultUser = ("Xuan Thang", 29)
+val defaultUser = ("Thai Quang", 26)
 
 // Xây dựng đồ thị: Chúng ta sử dụng hàm Graph để xây dựng đồ thị từ các RDD của đỉnh và cạnh
 val graph = Graph(vertices, relationships, defaultUser)
