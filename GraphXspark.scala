@@ -20,11 +20,11 @@ val vertices: RDD[(VertexId, (String, Int))] = sc.parallelize(Array(
 
 val relationships: RDD[Edge[String]] = sc.parallelize(Array(
   Edge(1L, 2L, "friend"),
-  Edge(2L, 3L, "family"),
-  Edge(3L, 2L, "follow"),
-  Edge(3L, 4L, "friend"),
-  Edge(4L, 5L, "follow"),
-  Edge(5L, 6L, "friend"),
+  Edge(2L, 3L, "uncle"),
+  Edge(3L, 2L, "brother"),
+  Edge(3L, 4L, "sister"),
+  Edge(4L, 5L, "father"),
+  Edge(5L, 6L, "family"),
   Edge(6L, 7L, "follow")
 ))
 
